@@ -22,12 +22,12 @@ class CreditCardNumberValidatorTest extends TestCase
     public function valueProvider()
     {
         return [
-            'shouldBeValidWhenValueIsANumberAndLengthEquals16' =>
+            'shouldBeValidWhenValueIsACreditCard' =>
             [
                 'value' => 1234567891234567,
                 'expectedResult' => true
             ],
-            'shouldNotBeValidWhenValueIsANumberAndLengthNotEquals16' =>
+            'shouldNotBeValidWhenValueIsNotACreditCard' =>
             [
                 'value' => 12345678912345678,
                 'expectedResult' => false
