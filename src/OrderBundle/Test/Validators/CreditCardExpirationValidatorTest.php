@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 class CreditCardExpirationValidatorTest extends TestCase
 {
 
-    public function testShouldBeValidWhenDateExpirationIsBiggerThenDateNow()
+    public function testShouldBeValidWhenDateIsNotExpired()
     {
         $dateTime = new DateTime();
 
@@ -22,7 +22,7 @@ class CreditCardExpirationValidatorTest extends TestCase
         $this->assertTrue($isValid);
     }
 
-    public function testShouldNotBeValidWhenDateExpirationIsSmallerThenDateNow()
+    public function testShouldNotBeValidWhenDateIsExpired()
     {
         $dateTime = new DateTime();
 
